@@ -1,0 +1,36 @@
+<div class="vacatures_list_page">
+<div class="vacature_layout">
+			<div class="container">
+				<div class="row vacatures_list_row">
+					{foreach $vacaturesItemList as $vacaturesItem}
+						 <div class="col-md-4 col-sm-6 col-12 vacatures_list_col">
+						 	<div class="vacatures_inner">
+						 		<a href="{$vacaturesItem.vacatures_link}">
+						 			<div class="col_content">
+						 				{if !empty($vacaturesItem.title)}
+						 					<h3>{$vacaturesItem.title}</h3>
+						 				{/if}
+						 				{if !empty($vacaturesItem.featured_image)}
+						 					<img src="{$vacaturesItem.featured_image}" alt="">
+					 					{/if}
+					 					{if !empty($vacaturesItem.intro)}
+							 				<div class="paragraph_div">
+							 					<ul>
+							 						<li>VACATURE</li>
+							 					</ul>
+							 					<p>
+							 						{$vacaturesItem.intro}
+							 						<span> ... <i class="fa fa-angle-right"></i></span>
+							 					</p>
+							 				</div>
+						 				{/if}
+						 			</div>
+						 		</a>
+						 	</div>
+						 </div>
+					 {/foreach}
+				</div>
+			</div>
+		</div>
+
+</div>

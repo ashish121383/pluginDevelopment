@@ -1,0 +1,33 @@
+.wrap table.pp_vacatures_theme_options tr td{
+        vertical-align:middle;
+    }
+    .wrap table.pp_vacatures_theme_options tr td b{
+        line-height:27px; 
+        font-size:16px;
+    }
+    .wrap table.pp_vacatures_theme_options tr td strong{
+        color:#21759B;
+    }
+    .wrap table.pp_vacatures_theme_options tr td label{
+        cursor:pointer;
+    }
+    .wrap table.pp_vacatures_theme_options thead tr td, .wrap table.pp_vacatures_theme_options tfoot tr td{
+        line-height:40px;
+    }
+    .wrap table.pp_vacatures_theme_options tr td a.pp_vacatures_addnewrow, .wrap table.pp_vacatures_theme_options tr td a.pp_vacatures_deleterow, .wrap table.pp_vacatures_theme_options tr td a.sitebtn{
+        background:url(<?php echo plugins_url();?>/pencilplus_vacatures/assets/images/add.png) no-repeat center center;
+        height:20px;
+        width:20px;
+        display:inline-block;
+        margin-left:5px;
+        vertical-align:middle;
+        background-size: cover;
+     }
+     .wrap table.pp_vacatures_theme_options tr td a.sitebtn{
+        background:url(<?php echo plugins_url();?>/pencilplus_vacatures/assets/images/image_add.png) no-repeat center center;
+        background-size: cover;
+     }
+     .wrap table.pp_vacatures_theme_options tr td a.pp_vacatures_deleterow{
+        background:url(<?php echo plugins_url();?>/pencilplus_vacatures/assets/images/delete.png) no-repeat center center;
+        background-size: cover;
+     }

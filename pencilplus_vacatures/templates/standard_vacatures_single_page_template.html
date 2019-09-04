@@ -1,0 +1,113 @@
+<div class="vacatures_single_page">
+	{foreach $single_vacatures as $single_vacatures_data}
+		<div class="blacksection">
+			<div class="container">
+				 <div class="row">
+				 	<ul>
+				 		<li><img src="http://vandergrift-bouw-nl.dev2.ucodia.com/nl/wp-content/uploads/sites/2/2019/06/icon.png" alt="">
+			         		<span>{$single_vacatures_data.amount_of_hours}</span></li>
+				 		<li><img src="http://vandergrift-bouw-nl.dev2.ucodia.com/nl/wp-content/uploads/sites/2/2019/06/icon2.png" alt="">
+			         		<span>{$single_vacatures_data.job_type}</span></li>
+				 	</ul>
+				 	<ul class="vta-date">
+				 		<li><a href="#" class="vtnsec-btn">Vacature</a></li>
+		         		<li><p><i class="fa fa-calendar" aria-hidden="true"></i>{$single_vacatures_data.date}</p></li>
+				 	</ul>
+		         </div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row function_Section">
+				<div class="col-md-12 col-sm-12 text-center">
+					<div class="vacancy_inner">
+					    <h3>{$single_vacatures_data.subtitle}</h3>
+						<p>{$single_vacatures_data.intro}</p>
+					    <a href="mailto:{$single_vacatures_data.vacatures_link}" class="vtn-btn"><i class="fa fa-envelope-o" aria-hidden="true"></i>DIRECT SOLLICITEREN</a>
+					</div>
+					<div class="vacancy_inner_two vacancySpace vacancy-hr">
+						<h4>functieomschrijving</h4>
+						<p>{$single_vacatures_data.job_description}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+				<div class="row">
+					<div class="Vfirst-section vacancySpace">
+						<div class="Vinner">
+							<h4>Wij vragen</h4>
+							<div class="we_ask_content">
+							     {$single_vacatures_data.we_ask}
+						    </div>
+						</div>
+					</div>
+					<div class="Vsecond-section vacancySpace">
+						<div class="Vinner">
+							<h4>Wij bieden</h4>
+							<div class="we_offer_content">
+							   {$single_vacatures_data.we_offer}
+							</div>
+						</div>
+					</div>
+			    </div>
+			    <div class="row secondV">
+			    	<div class="container">
+			    		<div class="row">
+			    			<div class="vacancy-hr"></div>
+			    		</div>
+			    	</div>
+			    </div>
+		</div>
+	{/foreach}
+	<div class="container">
+		{foreach $single_vacatures_profiles as $single_vacatures_profile}
+			<div class="row profile_intro_section">
+				<div class="col-md-12">
+					<div class="vacancySpace text-center vacancy-hr">
+						<h4>Overige informatie</h4>
+						<p>{$single_vacatures_profile.profilequote}</p>
+						<div class="sellFrame">
+							<h5>{$single_vacatures_profile.profilename}</h5>
+							<h6>{$single_vacatures_profile.profilefunction}</h6>
+							<div class="imgDiv">
+	                           <img src="{$single_vacatures_profile.profileimg}">
+	                        </div>
+						</div>
+						<a href="{$single_vacatures_profile.profilelink}" class="vtn-btn">direct solliciteren</a>
+					</div>
+				</div>
+			</div>
+		{/foreach}
+		<div class="vacatures_related_list">
+			<h5>Vacatures die je wellicht ook interessant vindt</h5>
+		</div>
+		<div class="row vacatures_list_row vacatures_list_row2 showCaseSection">
+			{foreach $related_vacancy as $related_vacancy_data}
+				<div class="col-md-4 col-sm-6 col-12 vacatures_list_col">
+					<div class="vacatures_inner">
+						<a href="{$related_vacancy_data.vacatures_link}">
+							<div class="col_content">
+								<h3>{$related_vacancy_data.title}</h3>
+								<img src="{$related_vacancy_data.featured_image}" alt="">
+								<div class="paragraph_div">
+									<ul>
+										<li>VACATURE</li>
+									</ul>
+									{if !empty({$related_vacancy_data.intro})}
+									<p>{$related_vacancy_data.intro}
+										<span> ... <i class="fa fa-angle-right"></i></span>
+									</p>
+									{/if}
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			{/foreach}
+		</div>
+		<div class="vacature_All_Link">
+			<a href="/nl/werken-bij-van-der-grift">BEKIJK ALLE VACATURES</a>
+	    </div>
+	</div>
+	</div>
+</div>

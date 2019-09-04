@@ -1,0 +1,27 @@
+<div class="newsListSlider">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <section class="showcaseSlider portfolio_list_bytag">
+          {foreach $vacaturesSliderFilter as $showcase}
+            {if !empty($showcase.featured_image)} 
+              <a href="{$showcase.vacatures_link}">
+                <span class="image_title">
+                  <img src="{$showcase.featured_image}">
+                  <div class="slider-title">
+                      {if !empty($showcase.title)}
+                      <h2>{$showcase.title|truncate:50:""}</h2>
+                      {/if}
+                  </div>
+                </span>
+                <span class="content_section">
+                  {if !empty($showcase.intro)}
+                    <p>{$showcase.intro|truncate:180}</p>
+                  {/if}
+                </span>
+              </a>     
+            {/if}
+          {/foreach}
+        </section>              
+      </div>
+    </div>
+  </div>
